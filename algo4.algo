@@ -1,0 +1,16 @@
+ALGORITHM algorithm_name
+VAR
+    i, key, j:INTEGER
+    arr : ARRAY_OF INTEGER[];
+BEGIN
+    FOR i FROM 1 TO n   DO
+        key = arr[i]
+        j = i - 1
+    END_FOR 
+
+    WHILE (j >= 0 AND arr[j] > key) DO
+        arr[j + 1] = arr[j]
+        j = j - 1
+    END_WHILE 
+    arr[j + 1] = key
+END
